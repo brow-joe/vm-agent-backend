@@ -1,0 +1,20 @@
+server:
+  port: 5090
+  shutdown: graceful
+  servlet:
+    context-path: /api
+    
+spring:
+  lifecycle:
+    timeout-per-shutdown-phase: "30s"
+  main:
+    banner-mode: 'off'
+  servlet:
+    multipart:
+      max-file-size: 500MB
+      max-request-size: 500MB
+  application:
+    name: vm-agent-backend
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
